@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    .container{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content:space-evenly;
+        align-items: center;
+    }
+    .dice{
+        background-color: rgb(35, 30, 163) ;
+    border: 2px white;
+    border-radius: 9999px;
+    color: white;
+    width: 145px;
+    height: 48px;
+    }
+    #rolled{
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco,
+         Consolas, "Liberation Mono", "Courier New", monospace;
+        font-size: 60px;
+    }
+.rolled-number{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    border-radius: 50px ;
+    border: 2px solid;
+        justify-content:center;
+        align-items: center;
+}
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice roller</title>
+</head>
+<body>
+    <div class="container">
+<div class="rolled-number">
+    <img src="" alt="" id="rolled">
+    <img src="" alt="" id="rolled2">
+</div>
+ <button onclick="pickNumber()" class="dice">roll</button>
+    </div>
+   <script>
+   const age = 17
+   console.log(age)
+   if (age < 18) console.log("Too young to buy alcohol")
+   if (age >= 18) console.log("Too old to buy alcohol")
+   
+
+   const rolledParagrah2 = document.getElementById('rolled2')
+    const rolledParagrah = document.getElementById('rolled')
+ const number = [1, 2, 3,4,5,6,7,8,9,10]
+
+const diceImage = ['dice-1.jpg','dice-2.jpg','dice-3.png','dice-4.jpeg','dice-5.jpeg',
+'dice-6.jpeg','number-7.jpeg',]
+const pickNumber = function(){
+    const rolledNumber = number[ (Math.floor(Math.random() * number.length))]
+    console.log(rolledNumber)
+    console.log(number)
+    if (rolledNumber == 1){
+        rolledParagrah.src = diceImage[0]
+        rolledParagrah2.src =''
+    }
+    if (rolledNumber == 2){
+        rolledParagrah.src = diceImage[1]
+           rolledParagrah2.src =''
+    }
+    if (rolledNumber == 3){
+        rolledParagrah.src = diceImage[2]
+           rolledParagrah2.src =''
+    }
+    if (rolledNumber == 4){
+        rolledParagrah.src = diceImage[3]
+           rolledParagrah2.src =''
+    }
+    if (rolledNumber == 5){
+        rolledParagrah.src = diceImage[4]
+           rolledParagrah2.src =''
+    }
+    if (rolledNumber == 6){
+        rolledParagrah.src = diceImage[5]
+           rolledParagrah2.src =''
+    }
+    if (rolledNumber == 7){
+     rolledParagrah.src = diceImage[2]
+     rolledParagrah2.src = diceImage[3]
+    }
+
+    if (rolledNumber == 8){
+     rolledParagrah.src = diceImage[2]
+     rolledParagrah2.src = diceImage[4]
+    }
+
+    if (rolledNumber == 9){
+        rolledParagrah.src = diceImage[3]
+        rolledParagrah2.src = diceImage[4]
+    }
+    if (rolledNumber == 10){
+        rolledParagrah.src = diceImage[4]
+        rolledParagrah2.src = diceImage[4]
+    }
+
+}
+  
+pickNumber()
+console.log(number)
+
+   </script> 
+</body>
+</html>
